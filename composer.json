@@ -1,0 +1,54 @@
+{
+    "name": "wdevs/laravel-avesapi",
+    "description": "Easily work with the Avesapi API in a Laravel application.",
+    "keywords": [
+        "wijnberg.dev",
+        "laravel-avesapi"
+    ],
+    "homepage": "https://github.com/Paulsky/laravel-avesapi",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Wijnberg Developments",
+            "email": "contact@wijnberg.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/support": "^8.68"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.22",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WDevs\\LaravelAvesapi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WDevs\\LaravelAvesapi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WDevs\\LaravelAvesapi\\Providers\\LaravelAvesapiServiceProvider"
+            ],
+            "aliases": {
+                "LaravelAvesapi": "WDevs\\LaravelAvesapi\\Providers\\LaravelAvesapiFacade"
+            }
+        }
+    }
+}
